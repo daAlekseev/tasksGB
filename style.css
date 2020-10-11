@@ -1,0 +1,23 @@
+.forImages{
+    width:270px;
+    margin: 30px;
+  
+}
+
+.container{
+    width: 1000px;
+}
+
+.container2{
+    width: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.forImages2{
+    margin: 20px;
+}
+
+.inputSt{
+    margin-bottom: 30px;
+}
