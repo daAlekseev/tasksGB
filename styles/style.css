@@ -1,0 +1,10 @@
+.forImages{
+    margin: 30px;
+  
+}
+
+.container{
+    display:flex;
+    flex-wrap: wrap;
+}
+
