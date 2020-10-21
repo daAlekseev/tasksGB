@@ -1,0 +1,24 @@
+
+.good{
+    border: 2px solid black;
+    display: flex;
+    flex-direction: row;
+    width: 800px;
+    margin: 10px;
+
+}
+
+.header_1{
+    margin: 10px;
+}
+
+.header_3{
+    text-align: center;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
