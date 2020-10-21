@@ -1,0 +1,17 @@
+.container{
+    border: 1px solid #000;
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+
+.part{
+    /* border: 1px solid #000; */
+    margin: 10px;
+    width: 90%;
+}
+
+.header_3{
+    margin: 10px;
+}
+
