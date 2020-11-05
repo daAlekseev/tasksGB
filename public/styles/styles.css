@@ -1,0 +1,278 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+}
+
+.head{
+    display: flex;
+    flex-direction: column;
+}
+
+.header1{
+    font-weight: normal;
+    margin: 10px;
+}
+
+.good{
+    border: 2px solid rgb(116, 29, 90);
+    display: flex;
+    flex-direction: row;
+    width: 800px;
+    margin: 10px;
+    background-color: rgb(255, 255, 255);
+    
+}
+
+.stock{
+    border: 2px solid rgb(116, 29, 90);
+    display: flex;
+    flex-direction: column;
+    width: 800px;
+    margin: 10px;
+}
+
+.header_3{
+    text-align: center;
+    margin: 10px;
+}
+
+.container_header{
+    border: 0.1px solid rgb(82, 34, 60);
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(116, 29, 90);
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.link{
+    margin: 10px;
+    color: white;
+    text-decoration: none;
+}
+
+.link:hover{
+    color: rgb(241, 198, 3);
+}
+
+
+.container_catalog{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.item{
+    border: 2px solid rgb(116, 29, 90);
+    display: flex;
+    flex-direction: row;
+    width: 800px;
+    margin: 10px ;
+}
+
+.button{
+    background-color: rgb(116, 29, 90);
+    color: white;
+    padding: 4px;
+    border: 1px solid rgb(116, 29, 90);
+}
+
+.button:hover{
+    background-color: white;
+    color: rgb(116, 29, 90);
+    border: 1px solid rgb(116, 29, 90);
+}
+
+.fullCart{
+    min-height: 75vh;
+}
+
+.cartItems{
+    margin: 10px;
+    /* min-height: 70vh; */
+}
+
+.itemInfo{
+    padding: 5px;
+    border: 0.2px solid rgb(116, 29, 90);
+    margin-bottom: 10px;
+    width: 20%;
+}
+
+.cartLink{
+    margin-top: 10px;
+    color: rgb(116, 29, 90);
+}
+
+.cartLink:hover{
+    color: rgb(241, 198, 3);
+    text-decoration: none;
+}
+
+.oneItem{
+    border: 2px solid black;
+    display: flex;
+    flex-direction: row;
+    width: 1000px;
+    margin: 10px;
+    border: 2px solid rgb(116, 29, 90);
+}
+
+.userData{
+    margin: 10px;
+}
+
+.containerCart{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    width: 30%;
+    min-height: 70vh; 
+}
+
+.order{
+    margin: 10px 0 10px 0;
+    padding: 5px;
+    border: 0.2px solid rgb(116, 29, 90);
+}
+
+.containerReview{
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+}
+
+.part{
+    border: 0.2px solid rgb(116, 29, 90);
+    margin: 10px 10px 0 0;
+    width: 500px;
+    padding: 5px;
+}
+
+.text{
+    color: rgb(116, 29, 90);
+}
+
+.info{
+    color: black;
+}
+
+.review{
+    margin: 10px;
+    border: 0.2px solid rgb(116, 29, 90);
+    padding: 5px;
+    width: 25%;
+}
+
+.reg{
+    margin: 10px;
+    min-height: 70vh;
+}
+
+.joinData{
+    margin-bottom: 10px;
+}
+
+.listContainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 10px;
+    /* min-height: 70vh;  */
+}
+
+.orderList{
+    margin: 0 10px 10px 0;
+    padding: 5px;
+    width: 300px;
+    border: 0.2px solid rgb(116, 29, 90);
+}
+
+.text1{
+    width: 200px;
+    margin: 0 10px 0 10px;
+}
+
+.editContainer{
+    display: flex;
+    flex-direction: column;
+    min-height: 70vh; 
+}
+
+.element{
+    border: 1px solid #000;
+    margin: 10px;
+    width: 100px;
+}
+
+.element_container{
+    display: flex;
+    flex-direction: row;
+}
+
+.editGood{
+    margin: 10px;
+    border: 2px solid  rgb(116, 29, 90);
+    display: flex;
+    flex-direction: row;
+    width: 1150px;
+    padding: 5px;
+    /* margin: 10px; */
+    /* justify-content: center; */
+
+}
+
+.editLeft{
+    width: 33%;
+}
+
+.editCenter{
+    width: 33%;
+}
+
+.editRight{
+    width: 33%;
+}
+
+
+.footer{
+    background-color:  rgb(116, 29, 90);
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    padding: 0 95px 0 95px;
+    
+    
+    /* top:-1000px; */
+    
+}
+
+.footerList{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.footerText{
+    
+    color:white;
+    padding: 50px;
+}
+
+.footerPart{
+    color: white;
+    padding: 50px;
+}
+
+.main{
+    color: rgb(116, 29, 90);
+}
