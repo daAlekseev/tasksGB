@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<form method="post">
+    <input type="text" name="userName"><br>
+    <input type="text" name="userLogin"><br>
+    <textarea name="userComment"></textarea><br>
+    <input type="submit" name="submit">
+</form>
+<table border="1px" style="border-collapse: collapse; margin-top: 20px;">
+    <tr>
+        <th>Name</th>
+        <th>Login</th>
+        <th>Comment</th>
+    </tr>
+    {% for i in masForm %}
+        <tr>
+            <td>{{ i.name }}</td>
+            <td>{{ i.login }}</td>
+            <td>{{ i.comment }}</td>
+        </tr>
+    {% endfor %}
+</table>
+</body>
+</html>
