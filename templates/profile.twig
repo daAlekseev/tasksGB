@@ -1,0 +1,20 @@
+{% extends 'layout.twig' %}
+
+{% block title %}MyApp / lk{% endblock %}
+{% block content %}
+    <p>Здравствуйте, {{ login }}!</p>
+    <form method="post" action="/profile/logout">
+        <input type="submit" value="Выйти">
+    </form>
+    <ul>Ваши 5 последних посещенных страниц:
+        {% if first | length < 5 %}
+            {% for i in first %}
+                <li>{{ i }}</li>
+            {% endfor %}
+        {% else %}
+            {% for i in second %}
+                <li>{{ i }}</li>
+            {% endfor %}
+        {% endif %}
+    </ul>
+{% endblock %}
