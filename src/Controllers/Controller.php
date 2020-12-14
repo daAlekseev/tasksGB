@@ -1,0 +1,32 @@
+<?php
+
+namespace MyApp\Controllers;
+
+use MyApp\App;
+
+abstract class Controller
+{
+    private $twig;
+
+    public function __construct()
+    {
+        $loader = new \Twig\Loader\FilesystemLoader(App::instance()->getConfig()['templates']);
+        $this->twig = new \Twig\Environment($loader);
+    }
+
+    protected function render($name, $data = [])
+    {
+        echo $this->twig->render($name, $data);
+    }
+
+    protected function history()
+    {
+        $_SESSION['history'][] = $_SERVER['REQUEST_URI'];
+    }
+
+    protected function redirect($url)
+    {
+        header('Location: ' . $url);
+        exit;
+    }
+}
