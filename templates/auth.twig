@@ -1,0 +1,12 @@
+{% extends 'layout.twig' %}
+
+{% block title %}MyApp / Authentication{% endblock %}
+{% block content %}
+    <p>//логин: admin //логин: user</p>
+    <p>//пароль: admin //пароль: user</p>
+    <form method="post" action="/auth/sign">
+        <input type="login" name="login">
+        <input type="password" name="pwd">
+        <input type="submit" value="Войти" name="sign">
+    </form>
+{% endblock %}
