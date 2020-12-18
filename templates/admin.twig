@@ -1,0 +1,43 @@
+
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script>
+    function acceptOrder(id){
+        $.ajax({
+            url: "?accept=" + id,
+            dataType: 'html',
+            success: function(html) {
+                $("body").children("#container").slice(-1).hide();
+                $("#body").append(html);
+            }
+        });
+    }
+
+    function rejectOrder(id){
+        $.ajax({
+            url: "?reject=" + id,
+            dataType: 'html',
+            success: function(html) {
+                $("body").children("#container").slice(-1).hide();
+                $("#body").append(html);
+            }
+        });
+    }
+</script>
+<body id = "body">
+    <div id="container">
+        {% for order in orders %}
+            <li>Дата заказа -  {{ order.date }} / статус заказа - {{ order.status }}</li>
+            {% if order.status == 1 %}
+                <input id="{{ order.id }}" type="submit" value="Подтвердить" onclick = "acceptOrder({{ order.id }})">
+                <input id="{{ order.id }}" type="submit" value="Отклонить" onclick = "rejectOrder({{ order.id }})">
+            {% else%}
+                <p>Статус заказа утвержден</p>
+            {% endif %}
+
+        {% endfor %}
+        <hr>
+        <p>Статус 0 - заказ отклонен</p>
+        <p>Статус 1 - в ожидании</p>
+        <p>Статус 2 - заказ подтвержден</p>
+    </div>
+</body>
