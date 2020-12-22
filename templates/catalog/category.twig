@@ -1,0 +1,17 @@
+{% extends 'layout.twig' %}
+
+{% block title %}MyApp / Catalog{% endblock %}
+{% block content %}
+    <br><a href="/catalog">Все категории</a>
+    <p>Категория {{  category }}</p>
+    <div style="display:flex; flex-wrap:wrap;">
+        {% for good in goods%}
+            <div style="border: 1px solid black; margin: 20px; text-align: center; width:600px">
+                <p>{{ good.title }}</p>
+                <a href="/catalog/{{ id }}/{{ good.good_id }}"><img src="/images/{{ good.name }}"></a>
+            </div>
+
+        {% endfor %}
+    </div>
+{% endblock %}
+
