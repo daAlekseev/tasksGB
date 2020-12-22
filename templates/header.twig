@@ -1,0 +1,12 @@
+
+<a href="/">Главная</a>
+<a href="/catalog">Каталог</a>
+{% if _login %}
+    <a href="/profile">Ваш профиль</a>
+{% else %}
+    <a href="/auth">Войти</a>
+{% endif %}
+{% if _role == 1 %}
+    <a href="/admin">Админ</a>
+{% endif %}
+<a href="/basket">Корзина</a><br>
