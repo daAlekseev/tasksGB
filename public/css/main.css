@@ -1,0 +1,14 @@
+.header{
+    display:flex;
+    justify-content: space-between;
+}
+
+.container{
+    width: 1100px;
+    margin: 0 auto;
+}
+
+.anchor{
+    font-size: 25px;
+    text-decoration: none;
+}
