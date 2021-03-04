@@ -1,0 +1,50 @@
+{
+    "1": {
+        "id": 1,
+        "title": "О футболе",
+        "catId": 1,
+        "slug": "sport",
+        "text": "Текст о футболе",
+        "isPrivate": 0
+    },
+    "2": {
+        "id": 2,
+        "title": "О хоккее",
+        "catId": 1,
+        "slug": "sport",
+        "text": "Текст о хоккее",
+        "isPrivate": 0
+    },
+    "3": {
+        "id": 3,
+        "title": "О политике",
+        "catId": 2,
+        "slug": "politics",
+        "text": "Текст о политике",
+        "isPrivate": 1
+    },
+    "4": {
+        "id": 4,
+        "title": "О искусстве",
+        "catId": 3,
+        "slug": "art",
+        "text": "Текст о искусстве",
+        "isPrivate": 0
+    },
+    "5": {
+        "title": "Баскетбол",
+        "catId": "1",
+        "text": "О баскетболе",
+        "slug": "sport",
+        "id": 5,
+        "isPrivate": 0
+    },
+    "6": {
+        "title": "Волейбол",
+        "catId": "1",
+        "text": "О волейболе",
+        "isPrivate": "1",
+        "slug": "sport",
+        "id": 6
+    }
+}
