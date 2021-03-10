@@ -1,0 +1,54 @@
+@extends('layouts.app')
+
+@section('title', 'Создание новости')
+
+@section('content')
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">Новая новость</div>
+                <div class="card-body">
+                    <form class="container" method="post" @if($news->id) action="{{ route('admin.news.update', $news) }}"
+                          @else action="{{ route('admin.news.store') }}" @endif
+                          enctype="multipart/form-data">
+                        @csrf
+                        @if($news->id)
+                        @method('PUT')
+                        @endif
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">Заголовок</label>
+                            <input type="text" class="form-control" id="exampleFormControlInput1"
+                                   placeholder="Заголовок новости" name="title" value="{{old('title') ?? $news->title}}">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlSelect1">Категория</label>
+                            <select name="category_id" class="form-control" id="exampleFormControlSelect1">
+                                @forelse($categories as $category)
+                                    <option @if ($category->id == $news->category_id) selected
+                                            @endif value="{{$category->id}}">{{$category->title}}</option>
+                                @empty
+                                    <option value="0">Категории нет</option>
+                                @endforelse
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlTextarea1">Текст</label>
+                            <textarea name="text" class="form-control"
+                                      id="exampleFormControlTextarea1" rows="8">{{old('text') ?? $news->text}}</textarea>
+                        </div>
+                        <div class="form-check">
+                            <input @if ($news->isPrivate == 1 || old('isPrivate'))) checked
+                                   @endif name="isPrivate" type="checkbox" value="1"
+                                   class="form-check-input">
+                            <label for="newsPrivate">Приватная</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="file" name="image">
+                        </div>
+                        <button type="submit" class="btn btn-primary mb-2">@if(!$news->id)Создать@elseИзменить@endif</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+@endsection
